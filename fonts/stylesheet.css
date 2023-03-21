@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'quicksand';
+    src: url("./quicksand/Quicksand-Light.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'oswald';
+    src: url("./oswald/Oswald-VariableFont_wght.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'intro-light';
+    src: url("./intro-light/intro-light.ttf") format('truetype');
+}
