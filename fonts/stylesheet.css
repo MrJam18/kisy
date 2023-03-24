@@ -8,5 +8,13 @@
 }
 @font-face {
     font-family: 'intro-light';
-    src: url("./intro-light/intro-light.ttf") format('truetype');
+    src: url("./src/intro-light.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'intro-bold';
+    src: url("./src/intro_bold.ttf") format('truetype');
+}
+@font-face {
+    font-family: 'intro-regular';
+    src: url("./src/intro_regular.ttf") format('truetype');
 }

@@ -4,99 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="basket.css">
     <link rel="index" href="index.html">
+    <link rel="stylesheet" href="./fonts/stylesheet.css">
     <title>KISY</title>
 </head>
 <body>
-    <div class="header">
+<div class="top">
+    <div id="menu__container" class="menu__container">
         <div class="container header__flex">
             <div class="header__one">
-                <a class="header__logo" href="index.html">
-                    <img src="img/logo.png.png" alt="logo">
+                <a class="header__logo" href="#">
+                    <img src="img/logo.png.png" class="logo" alt="logo">
                 </a>
-            <div class="links__header">
+                <div id="menu-switcher" class="header__menu-switcher">
+                    <div class="header__menu-switcher-line"></div>
+                    <div class="header__menu-switcher-line"></div>
+                    <div class="header__menu-switcher-line"></div>
+                </div>
+                <div class="links__header">
+                    <div class="linkone">
+                        <a class="link" href="index.html#hair" >
+                            <h1 class="hair__link" >Для волос</h1>
+                        </a>
+                    </div>
+                    <div class="linktwo">
+                        <a class="link" href="index.html#face" >
+                            <h1 class="hair__link" >Для лица</h1>
+                        </a>
+                    </div>
+                    <div class="linkthree">
+                        <a class="link" href="index.html#about-us" >
+                            <h1 class="hair__link" >О нас</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header__two">
+                <form class="search-form">
+                        <input class="search-input"  type="text"  placeholder="Искать здесь...">
+                    <button class="search-button" type="submit"></button>
+                </form>
+                <a class="header__item header__basket-box" href="basket.html">
+                    <img class="header__basket-logo" src="img/basket-icon.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div id="menu-phone" class="menu__elements-phone">
             <div class="linkone">
-                <a class="link" href="index.html" >
+                <a class="link" href="index.html#hair" >
                     <h1 class="hair__link" >Для волос</h1>
                 </a>
             </div>
             <div class="linktwo">
-                <a class="link" href="index.html" >
+                <a class="link" href="index.html#face" >
                     <h1 class="hair__link" >Для лица</h1>
                 </a>
             </div>
             <div class="linkthree">
-                <a class="link" href="index.html" >
+                <a class="link" href="index.html#about-us" >
                     <h1 class="hair__link" >О нас</h1>
                 </a>
             </div>
-            </div>
-            </div>
-            <div class="header__two">
-
-
-
-
-                <form>
-                    
-                    <input  type="text"  placeholder="Искать здесь...">
-                    <button class="button__submit" type="submit"></button>
-                   
-                </form>
-               
- 
-        
-
-
-
-                <a class="header__item" href="basket.html">
-                    <img src="img/basketlogo.png" alt="">
-                </a>
-            </div>
         </div>
-        <div class="intro">
-            <div class="container ">
-                <h1 class="baskettext">
-                    КОРЗИНА
-                </h1>
-                
-            
-            </div>
-             
-        </div>
-        
     </div>
-
-
-
-    <hr color="#E53175">
-    <footer class="footer">
-        <div class="conteiner footer__items">
-            <div class="items__footer">
-                <a href="" class="footer__href">Публичная оферта</a>
-                <a href="" class="footer__href">Политика конфиденцианльности</a>
-            </div>
-            <div class="items__footer">
-                <a href=""class="footer__href">Пользовательское соглашение</a>
-                <a href=""class="footer__href">Обработка данных</a>
-            </div>
-            <div class="items__footer">
-                <a href=""class="footer__href"><strong>Cookies</strong></a>
-                <p><strong>KISY 2023</strong></p>
+    <div class="container">
+        <div class="content">
+            <img src="./img/basket-bubbles.png" alt="bubbles" class="background-bubbles">
+            <div class="basket-content">
+                <h1 class="basket-header basket-header__empty">КОРЗИНА</h1>
+                <div class="basket-flexbox">
+                    <div class="basket__left-container">
+                        <div class="items-container">
+<!--                            <button id="remove-all" class="items__remove-all-button">-->
+<!--                                Удалить все-->
+<!--                            </button>-->
+                            <div class="items-list" id="items-list">
+                                <div class="items-empty-text">Ваша корзина пуста. </div>
+                            </div>
+                        </div>
+                        <a href="./index.html" class="basket__add-items-button basket__add-items-button_empty">
+                            <span class="basket__add-items-button-text basket__add-items-button-text_empty">перейти к покупкам</span>
+                        </a>
+                    </div>
+                    <div class="basket__right-container">
+                        <div class="total-container">
+                            <h2 class="total__header">СУММА ЗАКАЗА</h2>
+                            <div class="hr total__hr"></div>
+                            <div class="total__content">
+                                <div class="total__quantity-box flex-between text">
+                                    <div class="total__quantity-header">Количество товаров</div>
+                                    <div id="total-quantity" class="total__quantity">4</div>
+                                </div>
+                                <div class="total__discounts-box flex-between text">
+                                    <div class="total__quantity-header">Акции и скидки</div>
+                                    <div class="total__quantity"><span id="total-discount">10</span><span class="total__percent-sign">%</span></div>
+                                </div>
+                            </div>
+                            <div class="hr"></div>
+                            <div class="total__sum-box flex-between">
+                                <div class="total__sum-header">ИТОГО</div>
+                                <div id="total-sum" class="total__sum">6072</div>
+                            </div>
+                        </div>
+                        <button class="basket__buy-button">
+                            <span class="basket__buy-button-text text">Перейти к ОФОРМЛЕНИЮ</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+</div>
+<footer class="footer">
+    <hr color="#E53175">
+    <div class="container footer__items">
+        <div class="items__footer">
+            <a href="" class="footer__href">Публичная оферта</a>
+            <a href="" class="footer__href">Политика конфиденцианльности</a>
+        </div>
+        <div class="items__footer">
+            <a href="" class="footer__href">Пользовательское соглашение</a>
+            <a href="" class="footer__href">Обработка данных</a>
+        </div>
+        <div class="items__footer">
+            <a href="" class="footer__href">Cookies</a>
+            <p>KISY 2023</p>
+        </div>
+    </div>
+    <div class="container footer__messengers">
+        <a class="footer__messenger-box" href="#">
+            <img src="img/telegram.svg" alt="telegramm" class="footer__messenger">
+        </a>
+        <a class="footer__messenger-box" href="#">
+            <img src="img/instagram.svg" alt="instagram" class="footer__messenger">
+        </a>
+    </div>
+</footer>
+<script type="module" src="./scripts/basket.js" > </script>
 </body>
 </html>

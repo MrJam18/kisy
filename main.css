@@ -1,0 +1,1015 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.top {
+  background: url(img/background.header.png) center/cover;
+  padding: 30px 0 0 0;
+}
+
+.header__one {
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.links__header {
+  display: flex;
+  margin-top: 10px;
+}
+
+.linktwo {
+  margin-left: 50px;
+}
+
+.linkthree {
+  margin-left: 50px;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+  color: #FFFFFF;
+}
+
+.link:after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #E53175;
+  transition: width 0.4s ease-in-out;
+}
+
+.link:hover:after,
+.link:focus:after {
+  width: 100%;
+}
+
+.hair__link {
+  font-family: "intro-light", Calibri, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.search-input {
+  color: white;
+  height: 30px;
+}
+
+.header__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-right: 41px;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1160px;
+  height: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.intro {
+  margin: 0 0 0 0;
+  height: 950px;
+  position: relative;
+}
+
+.intro__wrap {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.item__title {
+  max-width: 506px;
+  padding-left: 16px;
+  color: #FFFFFF;
+  margin-top: 188px;
+  z-index: 5;
+}
+
+.card-spot {
+  position: absolute;
+  left: -250px;
+  z-index: 0;
+  top: 0;
+  width: 1000px;
+  height: 1000px;
+  object-position: center;
+}
+
+.intro__bottle {
+  right: -360px;
+  width: 1200px;
+  position: absolute;
+  z-index: 2;
+}
+
+.intro__black {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  background-color: black;
+}
+
+.item__decor {
+  display: inline-block;
+  color: #FFFFFF;
+  font-family: intro-light, sans-serif;
+  font-size: 20px;
+  max-width: 537px;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+  margin-top: 28px;
+  text-transform: initial;
+  text-align: justify;
+}
+
+.intro__gradient {
+  width: 100%;
+  height: 280px;
+  position: absolute;
+  background: linear-gradient(transparent, black);
+  bottom: 30px;
+}
+
+.item__head {
+  font-weight: 400;
+  font-size: 50px;
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  line-height: 74px;
+  letter-spacing: 0.08em;
+}
+
+.search-input {
+  height: 42px;
+  width: 0;
+  padding: 0 42px 0 15px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  outline: none;
+  background: transparent;
+  transition: 0.4s cubic-bezier(0, 0.8, 0, 1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.search-input:focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 2px solid #FFFFFF;
+}
+
+.search-form {
+  position: relative;
+  width: 300px;
+  margin: 0 auto;
+  height: 42px;
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background: url(img/search-icon.svg) no-repeat;
+  border: none;
+  background-size: 100% auto;
+  width: 21px;
+  height: 21px;
+  margin-top: 11px;
+}
+
+.header__basket-logo {
+  width: 21px;
+  height: 21px;
+  margin: 10px;
+}
+
+.header__basket-box {
+  margin-left: 20px;
+}
+
+.header__two {
+  display: flex;
+  z-index: 10;
+  height: 36px;
+}
+
+.buttoncard {
+  display: flex;
+  position: relative;
+  margin-top: 85px;
+  margin-right: 300px;
+  justify-content: center;
+}
+
+.buy {
+  border: 1px solid #E53175;
+  padding: 8px 50px 8px 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.main__block {
+  overflow-x: hidden;
+  display: flex;
+  background-color: black;
+  min-height: 500px;
+  max-height: 800px;
+}
+
+.about__content {
+  background: url(img/backgroundblock2.png) no-repeat;
+  width: 1462px;
+  height: 410px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.about__main {
+  background-color: black;
+}
+
+.about__girl {
+  position: absolute;
+  bottom: 0;
+  right: 243px;
+  z-index: 6;
+}
+
+.about__girl-text {
+  z-index: 6;
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 60px;
+  color: white;
+  margin-top: 200px;
+  margin-left: 105px;
+}
+
+.about__girl-background {
+  position: absolute;
+  bottom: -207px;
+  height: 550px;
+  right: 413px;
+  width: 550px;
+  z-index: 5;
+  background: url(img/spotblock2.png) no-repeat;
+}
+
+.main__flex {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-left: 300px;
+  margin-right: 200px;
+  width: 45%;
+  max-height: 50%;
+  top: 80px;
+  right: 60px;
+}
+
+.style__about {
+  font-weight: 600;
+  font-size: 50px;
+  color: #FFFFFF;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  line-height: 74px;
+  /* identical to box height */
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+.style__about__text {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: "intro-light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.text {
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 49px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 0.5;
+}
+
+.about__girl-text__this {
+  margin-left: 60px;
+}
+
+.about__girl-text__brand {
+  margin-left: 92px;
+}
+
+.about__girl-text__for-you {
+  margin-left: 95px;
+}
+
+.cards {
+  background-color: black;
+  padding-bottom: 100px;
+}
+
+.cards__opacity {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.card__wrapper {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card__background {
+  z-index: 2;
+  position: absolute;
+  width: 700px;
+  height: 500px;
+  left: -190px;
+  top: -74px;
+  transform: rotate(20deg);
+}
+
+.forface {
+  font-family: oswald, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 74px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 23px;
+}
+
+.for-face__text {
+  max-width: 520px;
+  color: #FFFFFF;
+  font-family: "intro-light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.text3card {
+  background-color: black;
+  max-height: 800px;
+  padding-top: 278px;
+  padding-bottom: 50px;
+}
+
+.card__button {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #FFFFFF, rgb(59, 55, 55));
+  -moz-border-image: -moz-linear-gradient(left, white, rgb(59, 55, 55));
+  -webkit-border-image: -webkit-linear-gradient(left, white, rgb(59, 55, 55));
+  border-image-slice: 1;
+  padding: 2px 30px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: #FFFFFF;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.card__button_flex {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card__img {
+  z-index: 5;
+}
+
+.footer {
+  background-color: black;
+  z-index: 10;
+  position: relative;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items__footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 95px;
+  color: #FFFFFF;
+  font-family: "intro-light", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 35px;
+  /* or 233% */
+  text-align: justify;
+}
+
+.footer__href {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.count {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.count .change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #35e201;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.count .minusmin {
+  background-color: #989797;
+}
+
+.input {
+  max-width: 55px;
+  text-align: center;
+  font-weight: 700;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+.footer__messengers {
+  display: flex;
+  margin-top: 20px;
+  padding-bottom: 100px;
+}
+
+.footer__messenger {
+  margin: 10px;
+  margin-bottom: 3px;
+  object-position: center;
+}
+
+.footer__messenger-box {
+  box-sizing: border-box;
+  border: 1px solid #E53175;
+  margin-right: 36px;
+}
+
+.header__menu-switcher {
+  display: none;
+}
+
+.intro__bottle_phone {
+  display: none;
+}
+
+.intro__bottle-bubbles {
+  display: none;
+}
+
+.about__phone-gradient {
+  display: none;
+}
+
+.about__girl-background_phone {
+  display: none;
+}
+
+.about__phone-gradient_bottom {
+  display: none;
+}
+
+.cards__background_phone {
+  display: none;
+}
+
+.intro__bottle-container {
+  display: none;
+}
+
+.menu__elements-phone {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .about__content {
+    width: 876px;
+    height: 344px;
+    margin: 0 auto;
+  }
+  .about__girl {
+    right: -20px;
+    width: 462px;
+    height: 412px;
+  }
+  .about__girl-text {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 115%;
+    margin-top: 175px;
+  }
+  .about__girl-background {
+    background-size: auto 100%;
+    right: 25px;
+    width: 550px;
+    height: 500px;
+  }
+  .style__about {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+  .main__flex {
+    max-width: 328px;
+    width: auto;
+    margin-left: 43px;
+    margin-right: 0;
+    padding: 0;
+    top: 0;
+    position: initial;
+    padding-top: 66px;
+  }
+  .style__about__text {
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .container {
+    max-width: 876px;
+  }
+  .intro__bottle {
+    right: -400px;
+    width: 1100px;
+  }
+  .item__head {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    letter-spacing: 0.08em;
+    max-width: 396px;
+  }
+  .item__decor {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: justify;
+  }
+  .buttoncard {
+    margin-top: 58px;
+  }
+  .card-spot {
+    left: -230px;
+    top: -70px;
+  }
+  .links__header {
+    z-index: 50;
+  }
+  .card__img {
+    width: 236px;
+    height: 236px;
+    object-position: center;
+    object-fit: contain;
+  }
+  .forface {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    letter-spacing: 0.08em;
+  }
+  .for-face__text {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+  }
+  .items__footer {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: justify;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .footer__messengers {
+    margin-bottom: 35px;
+  }
+  .footer__messenger-box {
+    margin-right: 30px;
+  }
+  .content {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 315px;
+    margin: 0 auto;
+  }
+  .content {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .links__header {
+    display: none;
+  }
+  .logo {
+    width: 65px;
+    height: 25px;
+    margin-right: 14px;
+  }
+  .header__logo {
+    margin: 0;
+  }
+  .header__menu-switcher {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    cursor: pointer;
+  }
+  .header__menu-switcher-line {
+    background: linear-gradient(#E53175, #B91436);
+    width: 19px;
+    height: 4px;
+  }
+  .search-form {
+    margin-left: 70px;
+    width: 118px;
+    height: 25px;
+  }
+  .search-input {
+    height: 25px;
+    padding: 0;
+  }
+  .search-input:focus {
+    width: 118px;
+  }
+  .search-button {
+    background-size: 100% auto;
+    width: 20px;
+    height: 20px;
+    bottom: 8px;
+    padding: 0;
+    top: -2px;
+  }
+  .header__basket-logo {
+    width: 19px;
+    height: 19px;
+    margin: 6px;
+  }
+  .header__basket-box {
+    border: 1px solid #E53175;
+    margin-left: 18px;
+  }
+  .intro__bottle {
+    width: 350px;
+    height: 350px;
+  }
+  .item__title {
+    width: 100%;
+    padding: 0;
+    margin-top: -50px;
+  }
+  .item__head {
+    max-width: 300px;
+    margin: 0;
+    padding: 0;
+  }
+  .card-spot {
+    left: -230px;
+    top: 79px;
+    opacity: 0.4;
+    /* display: none; */
+    width: 547px;
+    height: 550px;
+  }
+  .intro__wrap {
+    flex-wrap: wrap;
+  }
+  .intro__bottle {
+    display: none;
+  }
+  .intro__bottle_phone {
+    display: block;
+    height: auto;
+    top: 50px;
+    left: -36px;
+    z-index: 3;
+    margin: auto auto;
+    width: 100%;
+    min-width: 500px;
+    margin-left: 50%;
+    margin-top: -60px;
+    transform: translateX(-50%);
+  }
+  .card-spot {
+    display: none;
+  }
+  .intro__bottle-bubbles {
+    display: block;
+    position: absolute;
+    width: 410px;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0.7;
+  }
+  .header__flex {
+    align-items: start;
+    width: 100%;
+    max-width: unset;
+    padding: 20px;
+    padding-bottom: 8px;
+  }
+  .header {
+    padding-top: 0;
+  }
+  .menu__container {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    transition: background-color 300ms linear;
+    background: unset;
+  }
+  .menu__elements-phone {
+    display: none;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: "intro-light", sans-serif;
+    letter-spacing: 0.03em;
+    padding: 8px 25px;
+    opacity: 0;
+    transition: all 300ms linear;
+    transform: translate(0, -35px);
+  }
+  .header__one {
+    margin-top: 3px;
+  }
+  .item__head {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 129.7%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0;
+  }
+  .item__decor {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .buttoncard {
+    margin: 0;
+    margin-top: 25px;
+    width: 100%;
+  }
+  .buy {
+    width: 100%;
+  }
+  .about__main {
+    display: block;
+    background: url("./img/about__background-phone.png");
+    position: relative;
+    height: unset;
+    width: 100vw;
+    background-size: 100%;
+  }
+  .main__flex {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .about__phone-gradient {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    height: 150px;
+    top: 0;
+    background: linear-gradient(black, transparent);
+  }
+  .about-us {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 129.7%;
+    text-align: center;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .style__about__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 425px;
+  }
+  .about__content {
+    background: unset;
+    z-index: 3;
+    height: unset;
+    width: 100%;
+  }
+  .about__girl {
+    width: 476px;
+    height: 425px;
+    right: -20%;
+  }
+  .about__girl-text {
+    left: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+  .about__girl-background {
+    top: 220px;
+    z-index: 10;
+    background: unset;
+    right: -13%;
+  }
+  .about__girl-text__this {
+    margin-left: 40px;
+  }
+  .about__girl-text__brand {
+    margin-left: 70px;
+  }
+  .about__girl-text__made {
+    margin-left: 23px;
+  }
+  .about__girl-text__for-you {
+    margin-left: 50px;
+  }
+  .about__girl-background_phone {
+    display: block;
+    position: absolute;
+    top: 220px;
+    background-size: auto 100%;
+    width: 550px;
+    height: 500px;
+    right: -13%;
+  }
+  .about__phone-gradient_bottom {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    height: 100px;
+    bottom: 0;
+    background: linear-gradient(transparent, black);
+  }
+  .text3card {
+    padding-top: 100px;
+  }
+  .forface {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 129.7%;
+    letter-spacing: 0.08em;
+  }
+  .for-face__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .card__wrapper {
+    flex-wrap: wrap;
+  }
+  .card__background {
+    display: none;
+  }
+  .card__img {
+    height: 123px;
+    width: 132px;
+  }
+  .card__button {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  .cards__opacity {
+    opacity: 1;
+  }
+  .cards__background_phone {
+    display: block;
+    position: absolute;
+    top: -160px;
+    width: 100vw;
+    left: 0;
+    height: 600px;
+  }
+  .cards {
+    position: relative;
+  }
+  .items__footer {
+    font-weight: 300;
+    font-size: 8px;
+    line-height: 15px;
+    margin-top: 15px;
+    max-width: 100px;
+  }
+  .footer__messengers {
+    padding-bottom: 25px;
+    margin-top: 28px;
+  }
+  .footer__messenger {
+    margin: 6px;
+    margin-bottom: 1px;
+  }
+  html, body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  .intro__bottle-container {
+    display: block;
+    padding-top: 50px;
+  }
+  .intro {
+    height: auto;
+  }
+  .intro__bottle-bubbles {
+    width: 100%;
+  }
+  .hair__link {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+  }
+  .link {
+    min-width: auto;
+  }
+}
+
+
+/*# sourceMappingURL=main.css.map */
