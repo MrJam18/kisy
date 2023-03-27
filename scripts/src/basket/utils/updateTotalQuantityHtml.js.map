@@ -1,1 +1,0 @@
-{"version":3,"file":"updateTotalQuantityHtml.js","sourceRoot":"","sources":["updateTotalQuantityHtml.ts"],"names":[],"mappings":"AACA,OAAO,EAAC,UAAU,EAAC,MAAM,wCAAwC,CAAC;AAElE,MAAM,UAAU,uBAAuB,CAAC,KAAY;IAChD,UAAU,CAAC,SAAS,CAAC,YAAY,EAAE,KAAK,CAAC,GAAG,CAAC,CAAC;IAC9C,UAAU,CAAC,SAAS,CAAC,iBAAiB,EAAE,KAAK,CAAC,QAAQ,CAAC,CAAC;AAC5D,CAAC"}
