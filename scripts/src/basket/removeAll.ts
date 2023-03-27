@@ -1,8 +1,8 @@
 import {Basket} from "../../Classes/Basket.js";
-import {basketMapping} from "./basketMapping.js";
+import {emptyBasketRender} from "./emptyBasketRender.js";
 
 export function removeAll (basket: Basket) {
     basket.removeAll();
-    basketMapping(basket);
+    emptyBasketRender();
     basket.saveInStorage();
 }

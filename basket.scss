@@ -3,27 +3,36 @@ body {
   min-height: 100vh;
   display:flex;
   flex-direction:column;
-}
-.top {
-  height: 100%;
-  flex: 1;
-  display:flex;
-  flex-direction:column;
-}
-.footer {
-  padding-top: 75px;
+  background: content-box url('./img/background.header.compressed.png');
+  background-size: cover;
+  background-position: bottom;
 }
 .content {
   flex: 1;
   position: relative;
 }
 .background-bubbles {
-  position: absolute;
-  left: 23%;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
-  top: -35px;
+  z-index: 2;
+  background: url("./img/basket-bubbles.png") no-repeat;
+  background-size: 900px 700px;
+  width: 100%;
+  height: 100%;
+  //left: 692px;
+  //top: 184px;
+  background-position: center center;
+}
+.background-bubbles__container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding-bottom: 200px;
+  padding-top: 40px;
+  padding-left: 100px;
 }
 .basket-header {
   font-family: $oswald;
@@ -65,6 +74,7 @@ body {
   width: 130px;
   margin-left: 15px;
   height: 100%;
+  align-self: center;
 }
 .basket-content {
   z-index: 2;
@@ -72,13 +82,14 @@ body {
 }
 .item__name-container {
   min-width: 262px;
+  @extend %text;
 }
 .item__name {
-  @extend %text;
+  //@extend %text;
   text-transform: uppercase;
 }
 .item__type {
-  @extend %text;
+  //@extend %text;
 }
 .item__counted {
   display: flex;
@@ -134,12 +145,13 @@ body {
 .item__delete-button {
   box-sizing: border-box;
   display: block;
+  border: 1px solid transparent;
 }
 .item__delete-button:hover, .item__delete-button:focus {
   border-color: #6D6D6D;
 }
 .item__button {
-
+  @extend %button;
 }
 .item__button-content {
   margin: 7px;
@@ -220,6 +232,9 @@ body {
   text-decoration: none;
 }
 .basket__right-container {
+  display: block;
+}
+.basket__right-container_empty {
   display: none;
 }
 .items-empty-text {
@@ -234,4 +249,114 @@ body {
 .basket-header__empty {
   margin-bottom: 95px;
 }
+.content__gradient {
+  bottom: 0;
+  max-height: 300px;
+  height: 25%;
+  min-height: 150px;
+}
+.request__background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: transparent;
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: background 200ms;
+}
+.request__background_open {
+  background: rgba(0, 0, 0, 0.7);
+}
+.request__content-box-border {
+  position: relative;
+  background: $gradient;
+  padding: 2px;
+}
+.request__content-box {
+  position: relative;
+  padding: 20px 45px;
+  padding-bottom: 50px;
+  background: linear-gradient(165.26deg, #131313 9.8%, #232323 137.42%, #202020 140.38%);
+  //background: linear-gradient(#131313, #232323, #202020);
+}
+.request__header {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 44px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: $oswald;
+  margin-bottom: 40px;
+}
+.request__input {
+  background: #222222;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid transparent;
+  @extend %text;
+  width: 370px;
+  margin-top: 10px;
+}
+.request__input:hover, .request__input:focus {
+  border-color: $color;
+  transition: border-color $transition-time;
+}
+.request__input-header {
+  @extend %text;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.request__input-container {
+  margin-top: 18px;
+}
+.request__submit-button {
+  background: linear-gradient(90deg, #E53175 0%, #B91436 101.71%);
+  margin: 0 auto;
+  margin-top: 42px;
+  display: block;
+}
+.request__submit-button-text {
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  @extend %text;
+  margin: 0 45px;
+  line-height: 39px;
+}
+.request__close-button {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+}
+.top {
+  background: unset;
+}
+.footer__gradient {
+  display: none;
+}
+.request__inputs-container {
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+}
 
+
+
+
+
+
+
+
+
+@import "css-fragments/basket/tablet";
+@import "css-fragments/basket/phone";
+@import "css-fragments/tools";
+
+//diagnostic
+//* {
+//  border: 1px solid #33FF00 !important;
+//}

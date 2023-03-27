@@ -1,0 +1,115 @@
+@media(max-width: 1100px) {
+  body {
+    -webkit-overflow-scrolling: auto;
+  }
+  .about__content {
+    width: 876px;
+    height: 344px;
+    margin: 0 auto;
+  }
+  .about__girl {
+    right: -20px;
+    width: 462px;
+    height: 412px;
+  }
+  .about__girl-text {
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 115%;
+    margin-top: 175px;
+  }
+  .about__girl-background {
+    background-size: auto 100%;
+    right: 25px;
+    width: 550px;
+    height: 500px;
+  }
+  .style__about {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+  .main__flex {
+    max-width: 328px;
+    width: auto;
+    margin-left: 43px;
+    margin-right: 0;
+    padding: 0;
+    top: 0;
+    position: initial;
+    padding-top: 66px;
+  }
+  .style__about__text {
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .container {
+    max-width: 876px;
+  }
+  .intro__bottle {
+    right: -400px;
+    width: 1100px;
+  }
+  .item__head {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    letter-spacing: 0.08em;
+    max-width: 396px;
+  }
+  .item__text {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+    text-align: justify;
+  }
+  .buttoncard {
+    margin-top: 58px;
+  }
+  .card-spot {
+    left: -230px;
+    top: -70px;
+  }
+  .links__header {
+    z-index: 50;
+  }
+  .card__img {
+    width: 236px;
+    height: 236px;
+    object-position: center;
+    object-fit: contain;
+  }
+  .forface {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 52px;
+    letter-spacing: 0.08em;
+  }
+  .for-face__text {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 28px;
+  }
+  .items__footer {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 26px;
+    text-align: justify;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .footer__messenger-box {
+    margin-right: 30px;
+  }
+  .content {
+    overflow-x: hidden;
+  }
+}

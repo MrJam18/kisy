@@ -1,7 +1,7 @@
-import { basketMapping } from "./basketMapping.js";
+import { emptyBasketRender } from "./emptyBasketRender.js";
 export function removeAll(basket) {
     basket.removeAll();
-    basketMapping(basket);
+    emptyBasketRender();
     basket.saveInStorage();
 }
 //# sourceMappingURL=removeAll.js.map

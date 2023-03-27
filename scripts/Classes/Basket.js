@@ -66,5 +66,8 @@ export class Basket {
         this.total.quantity = 0;
         this.items = [];
     }
+    isEmpty() {
+        return this.items.length === 0;
+    }
 }
 //# sourceMappingURL=Basket.js.map

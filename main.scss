@@ -1,14 +1,9 @@
-$oswald: oswald, sans-serif;
-$intro: 'intro-light', sans-serif;
+@import "css-fragments/layout";
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-.top {
-  background: url(img/background.header.png) center/cover;
-  padding: 30px 0 0 0;
 }
 
 .header__one {
@@ -76,7 +71,6 @@ $intro: 'intro-light', sans-serif;
 .container {
   max-width: 1160px;
   height: 100%;
-  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -122,7 +116,7 @@ $intro: 'intro-light', sans-serif;
   background-color: black;
 }
 
-.item__decor {
+.item__text {
   display: inline-block;
   color: #FFFFFF;
   font-family: intro-light, sans-serif;
@@ -173,6 +167,11 @@ $intro: 'intro-light', sans-serif;
   z-index: 1;
   border-bottom: 2px solid #FFFFFF;
 }
+.search-input_focus {
+  width: 300px;
+  z-index: 1;
+  border-bottom: 2px solid #FFFFFF;
+}
 .search-form {
   position: relative;
   width: 300px;
@@ -191,14 +190,11 @@ $intro: 'intro-light', sans-serif;
   height: 21px;
   margin-top: 11px;
 }
-.header__basket-logo {
-  width: 21px;
-  height: 21px;
-  margin: 10px;
-}
-.header__basket-box {
-  margin-left: 20px;
-}
+//.header__basket-logo {
+//  width: 21px;
+//  height: 21px;
+//  margin: 10px;
+//}
 
 .header__two {
   display: flex;
@@ -233,7 +229,7 @@ $intro: 'intro-light', sans-serif;
 }
 
 .about__content {
-  background: url(img/backgroundblock2.png) no-repeat;
+  background: url(img/backgroundblock2.compressed.png) no-repeat;
   width: 1462px;
   height: 410px;
   position: relative;
@@ -471,21 +467,6 @@ $intro: 'intro-light', sans-serif;
   border-radius: 3px;
   margin: 0 5px;
 }
-.footer__messengers {
-  display: flex;
-  margin-top: 20px;
-  padding-bottom: 100px;
-}
-.footer__messenger {
-  margin: 10px;
-  margin-bottom: 3px;
-  object-position: center;
-}
-.footer__messenger-box {
-  box-sizing: border-box;
-  border: 1px solid #E53175;
-  margin-right: 36px;
-}
 .header__menu-switcher {
   display: none;
 }
@@ -514,7 +495,9 @@ $intro: 'intro-light', sans-serif;
   display: none;
 }
 
-@import "css-fragments/tablet";
-@import "css-fragments/phone";
+
+@import "css-fragments/main/tablet";
+@import "css-fragments/main/phone";
+@import "css-fragments/tools";
 
 /*# sourceMappingURL=main.css.map */

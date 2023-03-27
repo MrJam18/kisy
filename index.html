@@ -2,9 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="width=device-width" name="viewport" id="viewport">
     <link rel="stylesheet" href="./fonts/stylesheet.css">
     <link rel="stylesheet" href="main.css">
@@ -12,6 +10,10 @@
     <title>KISY</title>
 </head>
 <body>
+<div id="loading-screen" class="loading-screen">
+    <div class="loader"></div>
+</div>
+<!--header -->
     <div class="content">
     <div class="top">
         <div id="menu__container" class="menu__container">
@@ -46,7 +48,7 @@
             <div class="header__two">
                 <form class="search-form">
                     <input class="search-input"  type="text"  placeholder="Искать здесь...">
-                    <button class="search-button" type="submit"></button>
+                    <button id="search-button" class="search-button" type="button"></button>
                 </form>
                 <a class="header__item header__basket-box" href="basket.html">
                     <img class="header__basket-logo" src="img/basket-icon.svg" alt="">
@@ -54,39 +56,55 @@
             </div>
             </div>
             <div id="menu-phone" class="menu__elements-phone">
-                <div class="linkone">
-                    <a class="link" href="#hair" >
-                        <h1 class="hair__link" >Для волос</h1>
-                    </a>
-                </div>
-                <div class="linktwo">
-                    <a class="link" href="#face" >
-                        <h1 class="hair__link" >Для лица</h1>
-                    </a>
-                </div>
-                <div class="linkthree">
-                    <a class="link" href="#about-us" >
-                        <h1 class="hair__link" >О нас</h1>
-                    </a>
-                </div>
+                    <div class="linkone">
+                        <a class="link" href="#hair" >
+                            <h1 class="hair__link" >Для волос</h1>
+                        </a>
+                    </div>
+                    <div class="linktwo">
+                        <a class="link" href="#face" >
+                            <h1 class="hair__link" >Для лица</h1>
+                        </a>
+                    </div>
+                    <div class="linkthree">
+                        <a class="link" href="#about-us" >
+                            <h1 class="hair__link" >О нас</h1>
+                        </a>
+                    </div>
         </div>
         </div>
         <div class="intro__bottle-container">
-            <img src="img/maskbottle_phone.png" alt="маска для волос" class="intro__bottle_phone">
-            <img src="img/bubbles.png" alt="bubbles" class="intro__bottle-bubbles">
+            <picture>
+                <source srcset="img/null.svg" media="(min-width: 600px)">
+                <img src="img/maskbottle_phone.png" alt="маска для волос" class="intro__bottle_phone">
+            </picture>
+            <picture>
+                <source srcset="img/null.svg" media="(min-width: 600px)">
+                <img src="img/bubbles.compressed.png" alt="bubbles" class="intro__bottle-bubbles">
+            </picture>
         </div>
 
         <div class="intro">
             <div class="container intro__wrap">
                 <div class="item__title">
-                    <h1 class="item__head"><a id="hair"></a>ПИТАТЕЛЬНАЯ
-                         МАСКА ДЛЯ ВОЛОС <span class="item__decor">Воск в составе маски питает и восстанавливает волосы. Пантенол увлажняет и облегчает расчесывание. Протеины шелка и комплекс из аминокислот делают волосы более плотными, укрепляют волосяные фолликулы, предотвращают выпадение волос.</span></h1>
+                    <h1 class="item__head"><a id="hair"></a>
+                        <span class="item__title_phone">ПИТАТЕЛЬНАЯ </span> МАСКА ДЛЯ ВОЛОС</h1>
+                    <div class="item__text">
+                    Воск в составе маски питает и восстанавливает волосы. Пантенол увлажняет и облегчает расчесывание. Протеины шелка и комплекс из аминокислот делают волосы более плотными, укрепляют волосяные фолликулы, предотвращают выпадение волос.
+                    </div>
                          <div class="buttoncard">
                             <button class="buy">КУПИТЬ</button>
                         </div>
                 </div>
-                <img src="img/cardspot-converted.png" alt="card spot" class="card-spot">
-                <img alt="маска для волос" src="img/maskbottle-converted.png" class="intro__bottle">
+                <picture>
+                    <source srcset="img/null.svg" media="(max-width: 600px)" />
+                    <img src="img/cardspot-converted.compressed.png" alt="card spot" id="card-spot" class="card-spot">
+                </picture>
+                <picture>
+                    <source srcset="img/null.svg" media="(max-width: 600px)" />
+                    <img alt="маска для волос" src="img/maskbottle-converted.png" class="intro__bottle">
+                </picture>
+
             </div>
             <div class="intro__gradient"></div>
             <div class="intro__black"></div>
@@ -109,8 +127,12 @@
                     <div class="about__girl-text__for-you">ДЛЯ ТЕБЯ</div>
                 </div>
             </div>
-            <img src="img/spotblock2.png" alt="spotblock" class="about__girl-background_phone">
-            <img class="about__girl" src="img/gerlblock2.png" alt="girl">
+            <img src="img/spotblock2.compressed.png" alt="spotblock" class="about__girl-background_phone">
+            <picture>
+                <source srcset="img/gerlblock2.compressed.png" media="(max-width: 600px)" />
+                <img class="about__girl" src="img/gerlblock2.png" alt="girl">
+            </picture>
+<!--            <img class="about__girl" src="img/gerlblock2.png" alt="girl">-->
         </div>
         <div class="about__phone-gradient_bottom">
         </div>
@@ -126,23 +148,23 @@
 
    
         <div class="cards">
-            <img src="img/card-background-phone.png" alt="background" class="cards__background_phone">
+            <img src="img/card-background-phone.compressed.png" alt="background" class="cards__background_phone">
             <div class="cards__opacity">
             <div class="container card__wrapper">
                 <div class="card">
-                    <img src="img/spotblock2.png" alt="background" class="card__background_first card__background">
+                    <img src="img/spotblock2.compressed.png" alt="background" class="card__background_first card__background">
                     <img src="img/card1.png" class="card__img" alt="1">
                     <div class="card__button_flex"><button data-imageURL="img/test-item.png" data-id="1" data-price="2022" data-name="kisy color" data-type="Маска для волос" data-fullPrice="3000" data-discount="20" class="card__button">COOMING SOON</button></div>
 
                 </div>
                 <div class="card">
-                    <img src="img/spotblock2.png" alt="background" class="card__background_middle card__background">
+                    <img src="img/spotblock2.compressed.png" alt="background" class="card__background_middle card__background">
 <!--                    <img src="img/spotmiddle.png" alt="background" class="card__background_middle card__background">-->
                         <img src="img/card2.png" class="card__img" alt="2">
                     <div class="card__button_flex"><button data-imageURL="img/test-item.png" data-id="2" data-price="1000" data-name="kisy gel" data-type="Гель для лица" data-fullPrice="2000" data-discount="10" class="card__button">COOMING SOON</button></div>
                 </div>
                 <div class="card">
-                    <img src="img/spotblock2.png" alt="background" class="card__background_last card__background">
+                    <img src="img/spotblock2.compressed.png" alt="background" class="card__background_last card__background">
                         <img src="img/card3.png" class="card__img" alt="3">
                     <div class="card__button_flex"><button class="card__button">COOMING SOON</button></div>
                 </div>
@@ -176,10 +198,8 @@
             </a>
         </div>
     </footer>
-        <script defer src="scripts/modules/jquery/jquery.js"></script>
-        <script type="module" defer src="scripts/main.js"></script>
     </div>
-
-
+<script defer src="scripts/modules/jquery/jquery.js"></script>
+<script defer src="build/main.js"></script>
 </body>
 </html>

@@ -16,5 +16,22 @@ export class HtmlHelper {
         // @ts-ignore
         document.querySelector(selector).addEventListener('click', callback);
     }
+    static createAndInsertElement(selector, position = 'append', tag = 'div') {
+        const element = document.createElement(tag);
+        if (position === 'append')
+            document.querySelector(selector).append(element);
+        else
+            document.querySelector(selector).prepend(element);
+        return element;
+    }
+    static remove(selector) {
+        document.querySelector(selector).remove();
+    }
+    static removeClass(selector, className) {
+        document.querySelector(selector).classList.remove(className);
+    }
+    static addClass(selector, className) {
+        document.querySelector(selector).classList.add(className);
+    }
 }
 //# sourceMappingURL=HtmlHelper.js.map

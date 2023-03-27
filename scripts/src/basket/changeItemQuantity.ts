@@ -2,6 +2,7 @@ import {Basket} from "../../Classes/Basket.js";
 import {HTMLEvent} from "../../Types/HTMLEvent.js";
 import {updateTotalQuantityHtml} from "./utils/updateTotalQuantityHtml.js";
 import {removeItemHtml} from "./utils/removeItemHtml.js";
+import {emptyBasketRender} from "./emptyBasketRender.js";
 
 export function addQuantity (ev: HTMLEvent, basket: Basket) {
     const id = getId(ev);
@@ -13,7 +14,10 @@ export function addQuantity (ev: HTMLEvent, basket: Basket) {
 }
 export function subtractQuantity (ev: HTMLEvent, basket: Basket) {
     const item = basket.findById(getId(ev));
-    if(basket.subtractItemQuantity(item)) removeItemHtml(item.id);
+    if(basket.subtractItemQuantity(item)) {
+        if(basket.isEmpty()) emptyBasketRender();
+        else removeItemHtml(item.id);
+    }
     else changeQuantityHtml(item.quantity, ev.currentTarget);
     updateTotalQuantityHtml(basket.total);
     basket.saveInStorage();
