@@ -19,7 +19,7 @@ export function showAlert (message: string, delay: number = 4500): HTMLElement {
     <div class="alert">
         <div class="alert__message">${message}</div>
         <button type="button" class="alert__close-button" data-dismiss="alert" aria-label="Close">
-            <img src="./img/request-xmark.svg" alt="x" class="alert__button-img">
+            <img src="./img/x-mark.svg" alt="x" class="alert__button-img">
         </button>
     </div>
     <div class="alert__margin"></div>

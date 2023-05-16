@@ -3,6 +3,7 @@ import {HtmlHelper} from "../../Classes/Helpers/HtmlHelper.js";
 export function emptyBasketRender () {
     HtmlHelper.innerHTML('#items-list', '<div class="items-empty-text">Ваша корзина пуста.</div>');
     document.querySelector('#right-container').classList.add('basket__right-container_empty');
+    HtmlHelper.addClass('.basket-flexbox', 'basket-flexbox_empty');
     HtmlHelper.remove('#remove-all');
     HtmlHelper.innerHTML('#to-main-text', 'перейти к покупкам');
     document.querySelector('#basket-header').classList.add('basket-header__empty');

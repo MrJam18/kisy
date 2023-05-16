@@ -1,0 +1,423 @@
+@import "css-fragments/counted";
+@import "css-fragments/layout";
+body, html {
+  scroll-behavior: smooth;
+}
+.top {
+  display: flex;
+  height: 680px;
+  @extend %container;
+  @extend %border;
+  border-top: none;
+  border-bottom: none;
+  align-items: stretch;
+}
+.top__header-text {
+  @extend %header;
+}
+.top__header-text__bottom {
+  font-weight: 600;
+}
+.top__header-border {
+  width: 407px;
+  height: 2px;
+  background-color: white;
+}
+.top__left {
+  width: 50%;
+  padding: 75px 43px 128px 100px;
+}
+.top__left-text {
+  margin-top: 69px;
+  @extend %text;
+}
+.top__right {
+  width: 50%;
+  background-color: $white;
+  position: relative;
+}
+.top__buy-button {
+  @extend %button;
+  width: 286px;
+  height: 46px;
+  margin-top: 70px;
+}
+.top__kiss-my-hair-img {
+  position: absolute;
+  top: 21px;
+  left: 24px;
+}
+.top__bottle-img {
+  right: -15px;
+  bottom: 53px;
+  position: absolute;
+}
+.top__arrows {
+  right: 35px;
+  bottom: 25px;
+  position: absolute;
+}
+.top__arrow-img {
+  margin-left: 10px;
+}
+
+
+.main__block {
+  overflow-x: hidden;
+  display: flex;
+  background-color: black;
+  min-height: 500px;
+  max-height: 800px;
+}
+
+.about__background {
+  background-color: $color;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 90px;
+  padding-top: 92px;
+  border-top: 2px solid $border-color;
+  position: relative;
+}
+.about__top-border {
+  height: 20px;
+  width: 100%;
+  @extend %border;
+  border-bottom: none;
+}
+.about {
+  width: 100%;
+  @extend %border;
+  display: flex;
+}
+.about__photo {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background: url("../img/about-photo.png") center;
+  background-size: cover;
+}
+.about__photo-label-container {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+.about__photo-label {
+  width: 200px;
+  height: 120px;
+  margin-right: -5px;
+}
+.about__photo-label-mobile {
+  display: none;
+}
+.about__photo-label_second {
+  width: 180px;
+}
+.about__header {
+  @extend %header;
+  font-weight: 700;
+}
+.about__content {
+  padding: 67px 100px 0 122px;
+}
+.about__header-underline {
+  width: 349px;
+  @extend %underline;
+}
+.about__text {
+  @extend %text;
+  margin-top: 66px;
+  width: 440px;
+}
+.soon {
+  border-top: 2px solid $border-color;
+}
+.soon__content {
+  @extend %border;
+  border-top: none;
+  padding: 95px 0 77px 100px;
+  position: relative;
+}
+.soon__header {
+  @extend %header;
+}
+.soon__header_bold {
+  font-weight: 700;
+}
+.soon__header-underline {
+  @extend %underline;
+  width: 470px;
+}
+.soon__text {
+  @extend %text;
+  margin-top: 65px;
+}
+.soon__header-container_mobile {
+  display: none;
+}
+
+.cards {
+  @extend %border;
+  border-top: none;
+}
+.cards__opacity {
+  background-color: black;
+  opacity: 0.5;
+}
+.card__wrapper {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: $white;
+  border: none;
+  margin-right: 16px;
+  width: 322px;
+  height: 372px;
+  justify-content: center;
+  align-items: center;
+}
+.card__last {
+  margin: 0 !important;
+}
+
+.forface {
+  font-family: $oswald;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 74px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: white;
+  padding-bottom: 23px;
+}
+
+.for-face__text {
+  max-width: 520px;
+  color: #FFFFFF;
+  font-family: $intro;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.text3card {
+  background-color: black;
+  max-height: 800px;
+  padding-top: 278px;
+  padding-bottom: 50px;
+}
+
+.card__button {
+  width: 204px;
+  height: 52px;
+  border: 2px solid black;
+  color: black;
+  @extend .center;
+  font-family: $ubuntu;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 17px;
+  margin-top: 10px;
+  /* or 100% */
+
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.card__button_flex {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+}
+.card__img {
+  width: 221px;
+  height: 228px;
+}
+.bottom-padding {
+  height: 98px;
+  width: 100%;
+  @extend %border;
+  border-bottom: none;
+  border-top: none;
+}
+
+.count {
+  display: flex;
+  margin-bottom: 100px;
+}
+.count .change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #35e201;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.count .minusmin {
+  background-color: #989797;
+}
+
+.input {
+  max-width: 55px;
+  text-align: center;
+  font-weight: 700;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+.intro__bottle_phone {
+  display: none;
+}
+.intro__bottle-bubbles {
+  display: none;
+}
+.about__phone-gradient {
+  display: none;
+}
+.about__girl-background_phone {
+  display: none;
+}
+.about__phone-gradient_bottom {
+  display: none;
+}
+.cards__background_phone {
+  display: none;
+}
+.intro__bottle-container {
+  display: none;
+}
+.menu__elements-phone {
+  display: none;
+}
+.top__left-mobile-padding {
+  display: none;
+}
+.soon__mobile-underline {
+  display: none;
+  @extend %underline;
+}
+.kiss {
+  position: absolute;
+  width: 141px;
+  height: 137px;
+  background-position: center;
+  background-size: cover;
+}
+.kiss__white {
+  @extend .kiss;
+  background-image:  url("../img/kiss-white.png");
+}
+.kiss__black {
+  @extend .kiss;
+  background-image:  url("../img/kiss-black.png");
+}
+.kiss__red {
+  @extend .kiss;
+  background-image: url("../img/kiss-red.png");
+}
+.about__pc-top-kiss {
+  left: -155px;
+  top: -136px;
+}
+.about__pc-second-top-kiss {
+  left: -89px;
+  top: -20px;
+  transform: rotate(-15deg);
+}
+.about__pc-black-kiss {
+  top: 44px;
+  right: 148px;
+}
+.about__pc-right-first-kiss {
+  right: -118px;
+  transform: rotate(342deg);
+  top: 0;
+}
+.about__pc-right-second-kiss {
+  top: 140px;
+  right: -75px;
+}
+.about__pc-right-third-kiss {
+  bottom: -42px;
+  right: -22px;
+  transform: rotate(355deg);
+}
+.about {
+  position: relative;
+}
+
+.soon__middle-kiss {
+  left: 544px;
+  top: 74px;
+  transform: rotate(20deg);
+}
+.soon__right-top-kiss {
+  right: 60px;
+  top: 105px;
+}
+.soon__right-bottom-kiss {
+  bottom: 45px;
+  right: -43px;
+  transform: rotate(340deg);
+}
+.top__phone-kisses {
+  display: none;
+}
+.top__right-phone-container {
+  display: contents;
+}
+.card__phone-kiss {
+  display: none;
+}
+.buy-chooses {
+  width: 400px;
+  position: relative;
+  padding: 27px 40px 40px;
+  background: $white;
+  * {
+    color: black;
+  }
+}
+.buy-chooses__header {
+  @extend %header
+}
+.buy-chooses__button {
+  @extend %button;
+  max-width: 300px;
+  width: 100%;
+  text-decoration: unset;
+  margin-top: 20px;
+  height: 50px;
+}
+.buy-chooses__buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@import "css-fragments/main/tablet";
+@import "css-fragments/main/phone";
+@import "css-fragments/tools";
+
+/*# sourceMappingURL=main.css.map */

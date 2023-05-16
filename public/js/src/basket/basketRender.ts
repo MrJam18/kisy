@@ -1,4 +1,5 @@
 import {Basket} from "../../Classes/Basket.js";
+import {numberWithSpaces} from "../../utils/numberWithSpaces.js";
 import {addQuantity, subtractQuantity} from "./changeItemQuantity.js";
 import {HtmlHelper} from "../../Classes/Helpers/HtmlHelper.js";
 import {removeItem} from "./removeItem.js";
@@ -30,30 +31,26 @@ export function basketRender(basket: Basket) {
                     </div>
                     <div class="item__counted">
                         <div class="item__prices">
-                            <div class="item__price-without-discount">${el.fullPrice}<span class="rouble-sign">₽</span></div>
-                            <div class="item__price">${el.price}<span class="rouble-sign">₽</span></div>
+                            <div class="item__price-without-discount">${numberWithSpaces(el.fullPrice)}<span class="rouble-sign">₽</span></div>
+                            <div class="item__price">${numberWithSpaces(el.price)}<span class="rouble-sign">₽</span></div>
                         </div>
                         <div class="item__controls" data-id="${el.id}">
                             <div class="item__quantity-controls">
                                 <button class="item__add-button item__button"><span class="item__button-content">+</span></button>
                                 <span class="item__quantity">${el.quantity}</span>
-                                <button class="item__subtract-button item__button"><span class="item__button-content">-</span></button>
+                                <button class="item__subtract-button item__button"><span class="item__button-content item__button-content_minus">-</span></button>
                             </div>
-                            <button class="item__delete-button">
-                                <img src="./img/x-mark.svg" alt="x-mark" class="delete-button-img">
-                            </button>
                         </div>
                     </div>
                 </div>`;
             htmlList.append(itemEl);
             itemEl.querySelector('.item__add-button').addEventListener('click', (ev) => addQuantity(ev as HTMLEvent, basket));
             itemEl.querySelector('.item__subtract-button').addEventListener('click', (ev) => subtractQuantity(ev as HTMLEvent, basket));
-            itemEl.querySelector('.item__delete-button').addEventListener('click', (ev) => removeItem(ev as HTMLEvent, basket));
         });
         HtmlHelper.innerHTML('#total-quantity', totalQuantity);
         HtmlHelper.innerHTML('#total-sum', totalSum);
         HtmlHelper.innerHTML('#total-discount', Math.round(discountSum / basket.getItems().length));
-        const removeAllButton = HtmlHelper.createAndInsertElement('#items-container', 'prepend', 'button');
+        const removeAllButton = HtmlHelper.createAndInsertElement('#items-container', 'append', 'button');
         removeAllButton.innerHTML = 'Удалить все';
         removeAllButton.className = 'items__remove-all-button';
         removeAllButton.id = 'remove-all';
@@ -61,7 +58,6 @@ export function basketRender(basket: Basket) {
         HtmlHelper.removeClass('#basket-header', 'basket-header__empty');
         HtmlHelper.removeClass('#right-container', 'basket__right-container_empty');
         HtmlHelper.removeClass('#to-main', 'basket__add-items-button_empty');
-        HtmlHelper.removeClass('#to-main-text', 'basket__add-items-button-text_empty');
-        HtmlHelper.innerHTML('#to-main-text', 'добавить покупки');
+        HtmlHelper.innerHTML('#to-main', 'добавить покупки');
     }
 }

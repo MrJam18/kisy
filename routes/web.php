@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-})->name('main');
+Route::view('/', 'main')->name('main');
 Route::get('amo-redirect', [AmoCrmController::class, 'saveTokensByAuthCode']);
 Route::get('basket', function () {
     return view('basket');
@@ -24,4 +22,8 @@ Route::get('basket', function () {
 Route::get('button', function () {
     return view('button');
 });
+Route::view('confidential', 'rules.confidential')->name('confidential');
+Route::view('user-agreement', 'rules.userAgreement')->name('user-agreement');
+Route::view('public-offer', 'rules.offer')->name('public-offer');
+Route::view('personal-data-processing', 'rules.personalDataProcessing')->name('personal-data-processing');
 //Route::get('test', [AmoCrmController::class, 'test']);

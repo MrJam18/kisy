@@ -1,10 +1,40 @@
 @media (max-width: 600px) {
-  $container: 325px;
+  $container: 335px;
   %text-phone {
     @include text;
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
+  }
+  .basket-content {
+    max-width: $container;
+  }
+  .basket-header__underline {
+    width: 100%;
+  }
+
+
+  .basket__add-items-button {
+    background-color: $white;
+    color: black;
+    width: 100%;
+    margin-bottom: 0;
+    display: none;
+  }
+  .basket__add-items-button_mobile {
+    display: flex;
+    margin-top: 117px;
+  }
+  .basket__add-items-button_empty {
+    background-color: $color;
+    width: 250px;
+    margin-bottom: 120px;
+    display: flex;
+  }
+  .basket__buy-button {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
   }
   .basket-header {
     margin-top: 90px;
@@ -27,19 +57,8 @@
   .items-empty-text {
     @extend %text-phone;
   }
-  .basket__add-items-button-text {
-    font-weight: 300;
-    font-size: 20px;
-    letter-spacing: 0.2em;
-    margin: 0;
-    text-align: center;
-  }
-  .basket__add-items-button {
-    width: 100%;
-    margin-top: 16px;
-  }
   .basket__add-items-button_empty {
-    margin-top: 30px;
+    margin-top: 45px;
   }
   .basket__left-container {
     width: 100%;
@@ -55,76 +74,71 @@
     max-width: unset;
     width: 100%;
     position: relative;
-    height: 126px;
     margin-bottom: 5px;
   }
   .item__image-container {
-    align-self: baseline;
-    max-height: 70px;
-    max-width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0 0 7px;
+    height: 100%;
+    align-self: center;
+  }
+  .item__name {
+    display: none;
+  }
+  .item__name-container {
+    max-width: 150px;
+  }
+  .item__data-container {
+    margin: 10px 7px 10px 7px;
   }
   .item__image {
-    max-height: 70px;
+    height: 50px;
     max-width: 50px;
     display: block;
   }
-  .item__name-container {
-    @extend %text-phone;
-  }
-  .item__price {
-    text-align: left;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 20px;
-  }
-  .item__price-without-discount {
-    text-align: left;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 20px;
-  }
-  .item__prices {
-    display: flex;
-    position: absolute;
-    left: 21px;
-    bottom: 10px;
-    flex-direction: column-reverse;
-    align-items: baseline;
-  }
   .rouble-sign {
     @extend %text-phone;
-    font-size: 13px;
+    font-size: 16px;
+    margin-left: 4px;
   }
-  .item__price-without-discount .rouble-sign {
-    @extend %text-phone;
-    font-size: 13px;
+  .item__button {
+    border-color: $white;
   }
-  .item__counted {
-    justify-content: end;
+  .item__button-content {
+    margin: 3px 5px;
+    font-size: 18px;
   }
-  .item__data-container {
-    margin: 15px 13px;
-    display: block;
+  .item__button-content_minus {
+    margin: 0 6px;
+  }
+
+  .item__price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    margin-left: 5px;
+    min-width: unset;
+  }
+  .item__price-without-discount {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    min-width: unset;
+    width: min-content;
+    white-space:nowrap;
+    .rouble-sign {
+      font-size: 16px;
+    }
   }
   .item__controls {
     z-index: 2;
-  }
-  .basket__add-items-button {
     margin-top: 10px;
-  }
-  .basket__add-items-button_empty {
-    margin-top: 35px;
-  }
-  .basket__add-items-button-text {
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.15em;
   }
   .basket-flexbox {
     flex-wrap: wrap;
@@ -138,6 +152,7 @@
   }
   .total-container {
     padding: 16px 23px;
+    margin-top: 48px;
   }
   .total__header {
     font-weight: 300;
@@ -146,35 +161,43 @@
   }
   .total__content {
     margin-bottom: 30px;
+    margin-top: 35px;
+  }
+  .total__sum-box {
+    margin-top: 85px;
+  }
+  .total__discounts-box {
+    margin-top: 3px;
   }
   .request__content-box {
-    padding: 15px;
-    background: linear-gradient(165.26deg, #131313 9.8%, #232323 137.42%, #202020 140.38%);
+    padding: 17px;
+    width: 100%;
+    max-width: $container;
   }
   .request__inputs-box {
-    width: 256px;
+    width: 100%;
     margin: 0;
   }
   .request__header {
-    width: 215px;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 129.7%;
-    letter-spacing: 0.08em;
-    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 28px;
   }
   .request__input {
     line-height: 37px;
+    margin-top: 0;
+    max-width: unset;
+    width: 100%;
   }
   .request__input-header {
     font-weight: 300;
     font-size: 15px;
     line-height: 30px;
     letter-spacing: 0.15em;
+    text-transform: capitalize;
   }
   .request__submit-button {
     width: 100%;
-    margin-top: 22px;
+    margin-top: 38px;
     margin-bottom: 5px;
   }
   .request__close-button {
@@ -188,9 +211,11 @@
     z-index: 31;
   }
   .request__input-container, .request__input-container_top {
-    margin-top: 10px;
+    margin-top: 6px;
+    width: 100%;
   }
   .request__input-container_first {
     margin: 0;
   }
+
 }

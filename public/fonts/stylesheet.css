@@ -1,20 +1,38 @@
+/*@font-face {*/
+/*    font-family: 'quicksand';*/
+/*    src: url("./quicksand/Quicksand-Light.ttf") format('truetype');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'oswald';*/
+/*    src: url("./oswald/Oswald-VariableFont_wght.ttf") format('truetype');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'intro-light';*/
+/*    src: url("./src/Intro-Light.ttf") format('truetype');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'intro-bold';*/
+/*    src: url("./src/intro_bold.ttf") format('truetype');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'intro-regular';*/
+/*    src: url("./src/intro_regular.ttf") format('truetype');*/
+/*}*/
 @font-face {
-    font-family: 'quicksand';
-    src: url("./quicksand/Quicksand-Light.ttf") format('truetype');
+    font-family: 'Ubuntu';
+    src: url("./src/Ubuntu/Ubuntu-Light.ttf");
 }
 @font-face {
-    font-family: 'oswald';
-    src: url("./oswald/Oswald-VariableFont_wght.ttf") format('truetype');
+    font-family: 'Ubuntu-regular';
+    src: url("./src/Ubuntu/Ubuntu-Regular.ttf");
 }
 @font-face {
-    font-family: 'intro-light';
-    src: url("./src/Intro-Light.ttf") format('truetype');
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    src: url('./src/Ubuntu/Ubuntu-Bold.ttf');
 }
 @font-face {
-    font-family: 'intro-bold';
-    src: url("./src/intro_bold.ttf") format('truetype');
-}
-@font-face {
-    font-family: 'intro-regular';
-    src: url("./src/intro_regular.ttf") format('truetype');
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    src: url("./src/Ubuntu/Ubuntu-Regular.ttf");
 }

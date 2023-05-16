@@ -1,0 +1,79 @@
+@import 'css-fragments/counted';
+@import "css-fragments/layout";
+
+.rules {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.rules__big-header {
+  @extend .big-header;
+  margin-bottom: 17px;
+}
+.rules__header {
+  font-family: $ubuntu;
+  font-style: normal;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 600  ;
+  font-size: 25px;
+  line-height: 25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+@font-face
+{font-family:"Cambria Math";
+  panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+{font-family:Calibri;
+  panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal {
+  margin: 0 0 8.0pt;
+  @extend %text;
+}
+.MsoChpDefault {
+  font-family:"Calibri",sans-serif;
+}  .MsoPapDefault {margin-bottom:8.0pt;
+  line-height:107%;}
+@page WordSection1 {
+  size:595.3pt 841.9pt;
+  margin:56.7pt 42.5pt 56.7pt 85.05pt;
+}
+div.WordSection1 {
+  page:WordSection1;
+}
+
+@media (max-width: 1200px) {
+  .rules__header {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .rules {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+}
+@media (max-width: 600px) {
+  .rules {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .rules__header {
+    font-size: 16px;
+    margin-top: 17px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@import "css-fragments/tools";
